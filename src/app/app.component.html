@@ -1,15 +1,6 @@
-<mat-toolbar color="primary">
-  <span>{{title}}</span>
-  <span fxFlex></span>
-  <button mat-icon-button
-  routerLink="/heroes"
-  aria-label="Lista de heróis"
-  matTooltip="Heroes">
-    <mat-icon>sports_martial_arts</mat-icon>
-  </button>
-</mat-toolbar>
+<app-toolbar [title]="title" [menuItems]="menuItems"></app-toolbar>
 
-<div class="content">
+<div class="content" fxLayoutGap="12px">
 
   <router-outlet></router-outlet>
 

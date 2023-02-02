@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const routes: Routes = [
-{ path: 'heroes', component: HeroesComponent}
-]
+{ path: '', redirectTo: '/dashboard', pathMatch:'full'},
+{ path: 'heroes', component: HeroesComponent },
+{ path: 'heroes/:id', component: HeroDetailComponent },
+{ path: 'dashboard', component: DashboardComponent }
+];
 
 @NgModule({
   declarations: [],
