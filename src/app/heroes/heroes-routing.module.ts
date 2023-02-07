@@ -7,8 +7,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const routes: Routes = [
-  { path: 'heroes', component: HeroesComponent },
-  { path: 'heroes/:id', component: HeroDetailComponent }
+  { path: '', component: HeroesComponent },
+  { path: ':id', component: HeroDetailComponent }
 ];
 
 @NgModule({

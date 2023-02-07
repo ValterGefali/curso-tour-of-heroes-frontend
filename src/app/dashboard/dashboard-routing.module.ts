@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent }
+  { path: '', component: DashboardComponent }
 ];
 
 @NgModule({
