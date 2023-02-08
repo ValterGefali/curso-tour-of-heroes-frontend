@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -16,6 +17,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     //App
     CoreModule,
