@@ -15,7 +15,10 @@ import { Hero } from "../../../core/models/hero.model";
 export class HeroDetailComponent implements OnInit {
   hero!: Hero;
 
-  constructor(private heroService: HeroService, private location: Location, private route: ActivatedRoute) { }
+  constructor(
+    private heroService: HeroService
+    , private location: Location
+    , private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getHero();
@@ -26,8 +29,17 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.getHero(id).subscribe(hero => this.hero = hero);
 
   }
+
+  save(): void {
+    this.heroService.update(this.hero).subscribe(() => this.goBack());
+  }
+
   goBack(): void {
     this.location.back();
+  }
+
+  isFormIsValid(): boolean {
+    return !!this.hero.name.trim();
   }
 
 }
