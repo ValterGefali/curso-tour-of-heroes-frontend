@@ -2,7 +2,7 @@
   "heroes": [
     {
       "id": 2,
-      "name": "        aaaaa                  "
+      "name": "Naruto"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
     },
     {
       "id": 1,
-      "name": "Wolverine"
+      "name": "Wolverine 3"
     },
     {
       "id": 7,
@@ -39,6 +39,10 @@
     {
       "id": 10,
       "name": "Capitao America"
+    },
+    {
+      "name": "Kurama 7 caldas",
+      "id": 11
     }
   ]
 }
