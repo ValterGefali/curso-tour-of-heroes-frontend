@@ -1,42 +1,52 @@
 <h1>{{ isEditing ? "Update" : "Create" }} Hero</h1>
 
-<mat-card>
-  <mat-card-content fxLayout="column">
-    <mat-form-field *ngIf="isEditing">
-      <mat-label>ID</mat-label>
-      <input matInput disabled [value]="hero.id" />
-    </mat-form-field>
+<form [formGroup]="form" novalidate>
+  <mat-card>
+    <mat-card-content fxLayout="column">
+      <mat-form-field *ngIf="isEditing">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="id" />
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Hero name</mat-label>
-      <input
-        id="name"
-        matInput
-        [(ngModel)]="hero.name"
-        placeholder="Name"
-        type="text"
-      />
-    </mat-form-field>
-  </mat-card-content>
-  <mat-card-actions>
-    <button
-      color="primary"
-      mat-raised-button
-      (click)="create()"
-      *ngIf="!isEditing"
-    >
-      create
-    </button>
+      <mat-form-field>
+        <mat-label>Hero name</mat-label>
+        <input
+          id="name"
+          formControlName="name"
+          matInput
+          placeholder="Name"
+          type="text"
+        />
 
-    <button
-      color="primary"
-      mat-raised-button
-      (click)="update()"
-      [disabled]="!isFormIsValid()"
-      *ngIf="isEditing"
-    >
-      update
-    </button>
-    <button mat-raised-button (click)="goBack()">Go back</button>
-  </mat-card-actions>
-</mat-card>
+        <mat-error *ngIf="form.controls['name'].hasError('required')">
+          Name is required
+        </mat-error>
+
+        <mat-error *ngIf="form.controls['name'].hasError('minlength')">
+          Name shoud contain at least 3 caracteres
+        </mat-error>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        color="primary"
+        mat-raised-button
+        (click)="create()"
+        *ngIf="!isEditing"
+      >
+        create
+      </button>
+
+      <button
+        color="primary"
+        mat-raised-button
+        (click)="update()"
+        *ngIf="isEditing"
+      >
+        update
+      </button>
+      <button mat-raised-button (click)="goBack()">Go back</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

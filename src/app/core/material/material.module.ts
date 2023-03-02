@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 
+
 const MODULES = [
   MatTooltipModule,
   MatCardModule,
@@ -23,6 +24,7 @@ const MODULES = [
   MatExpansionModule,
   MatPaginatorModule,
   MatIconModule
+
 ];
 
 @NgModule({
