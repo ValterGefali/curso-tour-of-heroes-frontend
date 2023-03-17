@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -23,7 +24,8 @@ const MODULES = [
   MatButtonModule,
   MatExpansionModule,
   MatPaginatorModule,
-  MatIconModule
+  MatIconModule,
+  MatDialogModule
 
 ];
 

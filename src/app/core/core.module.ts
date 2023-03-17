@@ -9,9 +9,12 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
-const COMPONENTS = [LoadingComponent, MessagesComponent, ToolbarComponent, PageNotFoundComponent];
-const MODULES = [FlexLayoutModule, MaterialModule, RouterModule]
+const COMPONENTS = [LoadingComponent, MessagesComponent, ToolbarComponent, PageNotFoundComponent, ConfirmationDialogComponent];
+const MODULES = [FlexLayoutModule, MaterialModule, RouterModule, MatDialogModule]
 
 
 @NgModule({
@@ -24,7 +27,14 @@ const MODULES = [FlexLayoutModule, MaterialModule, RouterModule]
       useClass: LoadingInterceptor,
       multi: true
     }
+    ,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
   ]
+  ,
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule?: CoreModule) {

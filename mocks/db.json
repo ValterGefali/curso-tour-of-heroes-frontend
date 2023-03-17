@@ -1,24 +1,8 @@
 {
   "heroes": [
     {
-      "id": 2,
-      "name": "Naruto"
-    },
-    {
-      "id": 3,
-      "name": "Sasuke"
-    },
-    {
-      "id": 4,
-      "name": "Mulher Maravilha"
-    },
-    {
       "id": 5,
       "name": "Pantera Negra"
-    },
-    {
-      "id": 6,
-      "name": "Mulher Gato"
     },
     {
       "id": 1,
@@ -39,18 +23,6 @@
     {
       "id": 10,
       "name": "Capitao America"
-    },
-    {
-      "name": "Kurama 7 caldas",
-      "id": 11
-    },
-    {
-      "name": "Hinata",
-      "id": 12
-    },
-    {
-      "id": 13,
-      "name": "Super shock 2"
     }
   ]
 }

@@ -53,6 +53,16 @@ export class HeroService {
 
   }
 
+  delete(hero: Hero): Observable<any> {
+    return this.http
+      .delete<any>(this.getUrl(hero.id))
+      .pipe(tap(() => this.log(`deleted ${this.descAttributes(hero)}`)));
+
+  }
+  getUrl(id: number): string {
+    return `${this, this.heroesUrl}/${id}`;
+  }
+
 
   private descAttributes(hero: Hero): string {
     return `id=${hero.id} and name=${hero.name}`;
