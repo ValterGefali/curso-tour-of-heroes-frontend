@@ -1,28 +1,32 @@
 {
   "heroes": [
     {
-      "id": 5,
-      "name": "Pantera Negra"
+      "name": "Homem Aranha",
+      "id": 1
     },
     {
-      "id": 1,
-      "name": "Wolverine 3"
+      "name": "Homem de ferro",
+      "id": 2
     },
     {
-      "id": 7,
-      "name": "Capita Marvel"
+      "name": "Thor",
+      "id": 3
     },
     {
-      "id": 8,
-      "name": "Hulk"
+      "name": "Homem formiga",
+      "id": 4
     },
     {
-      "id": 9,
-      "name": "Homem de Ferro"
+      "name": "Jubileu",
+      "id": 5
     },
     {
-      "id": 10,
-      "name": "Capitao America"
+      "name": "Batman",
+      "id": 6
+    },
+    {
+      "name": "Wolverine",
+      "id": 7
     }
   ]
 }

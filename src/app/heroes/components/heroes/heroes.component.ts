@@ -22,6 +22,11 @@ export class HeroesComponent implements OnInit {
   }
 
 
+  onSelected(hero: Hero): void {
+    this.delete(hero);
+  }
+
+
   getHeroes(): void {
 
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
