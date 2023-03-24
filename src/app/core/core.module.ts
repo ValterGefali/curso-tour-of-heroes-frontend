@@ -12,6 +12,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 const COMPONENTS = [LoadingComponent, MessagesComponent, ToolbarComponent, PageNotFoundComponent, ConfirmationDialogComponent];
 const MODULES = [FlexLayoutModule, MaterialModule, RouterModule, MatDialogModule]
@@ -31,6 +32,11 @@ const MODULES = [FlexLayoutModule, MaterialModule, RouterModule, MatDialogModule
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
       multi: true
     }
   ]
