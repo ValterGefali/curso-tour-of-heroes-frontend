@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from './auth/services/auth.service';
 import { MenuItem } from './core/models/menu-item-model';
 
 @Component({
@@ -8,9 +10,29 @@ import { MenuItem } from './core/models/menu-item-model';
 })
 export class AppComponent {
 
-  title = 'Tour of heroes';
-  soma = 0;
+  isLoggedIn$: Observable<boolean>;
 
+  menuItems: MenuItem[] =
+    [
+      { icon: 'dashboard', routerLink: '/dashboard', toolTipText: 'Dashboard' },
+      { icon: 'sports_martial_arts', routerLink: '/heroes', toolTipText: 'Heroes' },
+    ]
+
+  title = 'Tour of heroes';
+
+  constructor(private authService: AuthService) {
+    this.isLoggedIn$ = this.authService.isLoggedIn$;
+
+  }
+
+  onLogout(): void {
+    this.authService.logout();
+  }
+
+
+  //soma = 0;
+
+  /*
   matriz: number[][] =
     [
       [-9, -9, -9, 1, 1, 1],
@@ -20,12 +42,8 @@ export class AppComponent {
       [0, 0, 0, -2, 0, 0],
       [0, 0, 1, 2, 4, 0],
     ];
+    */
 
-  menuItems: MenuItem[] =
-    [
-      { icon: 'dashboard', routerLink: '/dashboard', toolTipText: 'Dashboard' },
-      { icon: 'sports_martial_arts', routerLink: '/heroes', toolTipText: 'Heroes' },
-    ]
 
 
 

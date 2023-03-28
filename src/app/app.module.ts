@@ -7,11 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { LoginComponent } from './login/login.component';
+
 import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent],
   imports: [
     //@angular
     BrowserModule,
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
 
     //App
+    AuthModule,
     CoreModule,
     AppRoutingModule
 

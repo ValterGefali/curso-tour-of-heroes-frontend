@@ -1,32 +1,24 @@
 {
   "heroes": [
     {
-      "name": "Homem Aranha",
+      "name": "Paulo",
       "id": 1
     },
     {
-      "name": "Homem de ferro",
+      "name": "Melo",
       "id": 2
     },
     {
-      "name": "Thor",
+      "name": "Eduardo",
       "id": 3
     },
     {
-      "name": "Homem formiga",
+      "name": "Andreia",
       "id": 4
     },
     {
-      "name": "Jubileu",
+      "name": "Bio Melo",
       "id": 5
-    },
-    {
-      "name": "Batman",
-      "id": 6
-    },
-    {
-      "name": "Wolverine",
-      "id": 7
     }
   ]
 }

@@ -10,6 +10,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -25,7 +26,8 @@ const MODULES = [
   MatExpansionModule,
   MatPaginatorModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule,
+  MatMenuModule
 
 ];
 
